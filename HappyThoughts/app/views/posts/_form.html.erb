@@ -1,0 +1,29 @@
+<%= form_for(@post) do |f| %>
+
+	<div id="error_messages">
+		<% if @post.errors.any? %>
+			<h3>
+				<%= pluralize(@post.errors.count, "error") %>
+				Prohibited posts to be posted.
+			</h3>
+			<ul>
+				<% @post.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</div>
+
+	<div id="post_div">
+		<p>
+			Tell us about your Happy Thoughts!
+			<br>
+			<%= f.text_field :body %>
+		</p>
+
+		<p>
+			<%= f.submit %>
+		</p>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
+	</div>
+<% end %>
