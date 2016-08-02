@@ -8,32 +8,35 @@
 <hr>
 
 <h1>Show Personal Posts</h1>
-<% @user.posts.each do |p| %>
-	<p>
-		User Id: <%= p.user_id %>
-		<br>
-		Contents: <%= p.body %>
-		<br>
-		<% if p.user_id == current_user.id %>
-			<%= link_to "Delete Post", post_path(p.id), :method => :delete, 
-					:data => {confirm: "Do you wish to delete your happy moment?"} %>
-		<% end %>
-	</p>
+<% if @posts != nil %>
+	<% @user.posts.each do |p| %>
+		<p>
+			User Id: <%= p.user_id %>
+			<br>
+			Contents: <%= p.body %>
+			<br>
+			<% if p.user_id == current_user.id %>
+				<%= link_to "Delete Post", post_path(p.id), :method => :delete, 
+						:data => {confirm: "Do you wish to delete your happy moment?"} %>
+			<% end %>
+		</p>
+	<% end %>
 <% end %>
 
 <hr>
 <h1>D3 Data Visualization Section (if we have time)</h1>
 
 <hr>
-<h1>All User Posts</h1>
-	<% @posts.each do |p| %>
-		<p>
-			User ID: <%= p.user_id %>
-			<br>
-			Contents: <%= p.body %>
-		</p>
-	<% end %>
-
+<% if @posts != nil %>
+	<h1>All User Posts</h1>
+		<% @posts.each do |p| %>
+			<p>
+				User ID: <%= p.user_id %>
+				<br>
+				Contents: <%= p.body %>
+			</p>
+		<% end %>
+<% end %>
 
 
 
