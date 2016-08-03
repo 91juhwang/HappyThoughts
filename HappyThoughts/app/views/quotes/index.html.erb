@@ -1,7 +1,10 @@
 <% @user.quotes.each do |q| %>
-<%= q.user_id %>
 <%= q.quotes %>
 <br>
 - <%= q.author %>
+<br>
+<%= link_to "delete", quote_path(:id => q.id), 
+		:method => :delete, 
+		:data => { confirm: "Do you wish to delete your quote?" } %>
 <hr>
 <% end %>
