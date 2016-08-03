@@ -1,0 +1,156 @@
+#invisible {
+  color: #fff; }
+
+.container {
+  /*border: $border;*/ }
+
+/*Yield template */
+nav {
+  background-color: #ffdb00;
+  height: 55px; }
+  nav ul {
+    float: right;
+    margin: 0px; }
+  nav li {
+    list-style-type: none;
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px; }
+  nav a {
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none; }
+  nav a:hover {
+    text-decoration: underline;
+    /*color: #ccc;*/ }
+
+#personal {
+  height: 50px;
+  border-bottom: 1px solid #ffdb00; }
+  #personal #menu {
+    width: 20%;
+    float: left;
+    background-color: #ffdb00;
+    height: 50px;
+    text-align: center; }
+    #personal #menu img {
+      width: 25px;
+      margin-top: 10px; }
+  #personal #title {
+    width: 60%;
+    float: left;
+    /*color: #fff;*/
+    margin-top: 10px;
+    /*background-color: #fff;*/
+    height: 50px;
+    text-align: center;
+    border: none; }
+  #personal #post {
+    /*	background-color: #fff;
+    	border-bottom:1px solid $yellow;*/
+    width: 20%;
+    float: left;
+    height: 50px; }
+    #personal #post img {
+      margin-left: 20px;
+      margin-top: 5px;
+      width: 30px; }
+
+#welcome {
+  height: 570px; }
+  #welcome img {
+    margin-top: 70px;
+    margin-left: 40%;
+    width: 25%; }
+  #welcome h6 {
+    font-size: 14px;
+    margin-top: 180px;
+    text-align: center; }
+  #welcome p {
+    font-size: 12px;
+    text-align: center; }
+  #welcome #primary {
+    margin-top: 20px;
+    background-color: #ffdb00;
+    border: white;
+    color: white; }
+  #welcome #quote {
+    margin-top: 150px;
+    height: 200px;
+    /*border: 1px solid #ccc;*/ }
+    #welcome #quote h5 {
+      color: #4f4f4f;
+      text-align: center; }
+    #welcome #quote h6 {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 80px;
+      /*border: 1px solid #ccc;*/ }
+  #welcome #tho nav {
+    background-color: white;
+    border-bottom: 1px solid #ffdb00; }
+    #welcome #tho nav #words {
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-left: 160px;
+      color: #ccc;
+      font-weight: 100; }
+    #welcome #tho nav #close {
+      font-size: 25px;
+      font-weight: 100;
+      color: #4f4f4f; }
+    #welcome #tho nav #happy_b {
+      background-color: #ffed7f;
+      border: none;
+      color: #fff;
+      width: 60px;
+      padding-left: 10px;
+      float: right;
+      margin-top: 5px; }
+  #welcome #tho textarea {
+    margin-top: 30px;
+    height: 150px; }
+  #welcome #tho #pic {
+    width: 50px;
+    padding: 0px;
+    margin: 0px; }
+    #welcome #tho #pic img {
+      width: 25px;
+      margin: 0px;
+      margin-top: 5px;
+      padding: 0px; }
+  #welcome #happy_post {
+    border: 1px solid #ccc;
+    margin-top: 10px; }
+    #welcome #happy_post p {
+      padding: 10px 10px;
+      font-size: 13px;
+      margin-top: 10px; }
+    #welcome #happy_post #date {
+      float: right;
+      margin-right: 30px; }
+  #welcome #menu {
+    margin-top: 305px;
+    border: 1px solid #ccc; }
+    #welcome #menu li {
+      padding-top: 20px;
+      margin-bottom: 20px;
+      border-top: 1px solid #ffdb00;
+      /*border-bottom: 1px solid $yellow;*/
+      padding-left: 20px; }
+
+#form_container {
+  /*background-color: $yellow;*/ }
+  #form_container h4 {
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center; }
+  #form_container input {
+    /*font-size: 11px;*/
+    display: inline;
+    margin-bottom: 30px; }
+  #form_container #form-inputs {
+    margin-top: 50px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -7,24 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 	<nav>
-	<% if !user_signed_in? %>
-		<li><a href="/">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="/users/sign-up">Sign Up</a></li>
-		<li><a href="/users/login">Log In</a></li>
-	<% end %> 
+		<% if !user_signed_in? %>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="/users/sign-up">Sign Up</a></li>
+				<li><a href="/users/login">Log In</a></li>
+			</ul>
+		<% end %> 
 	</nav>
 
-	<nav>	
+
+<!-- 	<nav>	
 		<% if user_signed_in? %>
-		<li><a href="/">Home</a></li>
-		<li><a href="#about">About</a></li>
-			<li><a href="/posts">Profile</a></li> 
-			<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-			<li><%= link_to "My Quotes", quotes_path %></li>
-		<% end %>
-	</nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="/posts">Profile</a></li> 
+				<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
+			</ul>
+		<% end %>	
+	</nav> -->
 	
 <%= yield %>
 
