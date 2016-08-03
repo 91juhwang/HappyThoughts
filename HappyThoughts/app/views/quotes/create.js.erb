@@ -1,7 +1,2 @@
 var saved_quote = document.getElementById("saving_quote")
 saved_quote.innerHTML = "<p>Saved</p>";
-
-var quote_generator = document.getElementById("quote_generator")
-quote_generator.addEventListener("click", function() {
-	saved_quote.innerHTML = "<a href='/quotes?<%=@author%>&amp;<%=@daily_quote%>&amp;<%=current_user.id%>' data-remote='true' rel='nofollow' data-method='post'>Save this quote</a>"
-});

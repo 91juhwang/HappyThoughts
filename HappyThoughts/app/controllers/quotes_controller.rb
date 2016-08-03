@@ -6,7 +6,6 @@ class QuotesController < ApplicationController
 
 	def create
 		@quote = Quote.create(quote_params)
-
 		respond_to do |format|
       format.js { render :create }
     end

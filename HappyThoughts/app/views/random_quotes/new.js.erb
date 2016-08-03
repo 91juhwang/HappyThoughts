@@ -1,8 +1,16 @@
-var daily_quote = document.getElementById("daily_quote")
+var random_quote = document.getElementById("quote_generator");
+random_quote.innerHTML = "<a data-remote='true' href='/random'>Show a different quote</a>"
+
+var saved_quote = document.getElementById("saving_quote");
+var link = "<%= j link_to('Save this quote', quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post) %>";
+saved_quote.innerHTML = link;
+
+var daily_quote = document.getElementById("daily_quote");
 daily_quote.innerHTML = "<%= @daily_quote %>"
 
-var quote_author = document.getElementById("quote_author")
+var quote_author = document.getElementById("quote_author");
 quote_author.innerHTML = "- <%= @author %>"
 
-var random_quote = document.getElementById("quote_generator")
-random_quote.innerHTML = "<a data-remote='true' href='/random'>Show a different quote</a>"
+
+
+
