@@ -1,0 +1,223 @@
+$yellow: #ffdb00;
+$lightyellow:#ffed7f;
+$lightblack: #4f4f4f;
+$grey:#ccc;
+$border: 1px solid #ccc;
+
+
+nav{
+	height: 50px;
+	border-bottom: 1px solid $yellow;
+	#menu{
+
+	width: 20%;
+	float: left;
+	background-color: $yellow;
+	height: 50px;
+	text-align: center;
+
+		img{
+			width:25px;
+			margin-top: 10px;
+		}
+
+	}	
+
+	#title{
+	width: 60%;
+	float: left;
+	/*color: #fff;*/
+	margin-top: 10px;
+	/*background-color: #fff;*/
+	height: 50px;
+	text-align: center;
+	border: none
+	}
+
+	#post{
+/*	background-color: #fff;
+	border-bottom:1px solid $yellow;*/
+
+	width: 20%;
+	float: left;
+	height: 50px;
+		
+		img{
+			margin-left:20px;
+			margin-top: 5px;
+			width:30px;
+		}	
+
+	}
+
+}
+
+
+#welcome{
+
+	height: 570px;
+
+	img{
+	margin-top:70px;
+	margin-left:40%;
+	width: 25%;
+	}
+
+	h6{
+	font-size: 14px;
+	margin-top: 180px;
+	text-align: center;
+	}
+
+	p{
+	font-size: 12px;
+	text-align: center;
+	}
+
+	#primary{
+		margin-top: 20px;
+		background-color: $yellow;
+		border: white;
+		color: white;
+	}
+
+	#quote{
+		margin-top: 150px;
+		height: 200px;
+		/*border: 1px solid #ccc;*/
+	
+		h5{
+			color: $lightblack;
+			text-align: center;
+		}
+
+		h6{
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-top: 80px;
+			/*border: 1px solid #ccc;*/
+		}	
+	}
+
+	#tho{
+
+		nav{
+
+			background-color: white;
+			border-bottom: 1px solid $yellow;
+
+			#words{
+				font-size: 13px;
+				letter-spacing: 1px;
+				margin-left: 160px;
+				color: $grey;
+				font-weight: 100;
+			}
+
+
+			#close{
+				font-size: 25px;
+				font-weight: 100;
+				color: $lightblack;
+			}
+
+
+			#happy_b{
+
+				background-color: $lightyellow;
+				border: none;
+				color: #fff;
+				width: 60px;
+				padding-left: 10px;
+				float: right;
+				margin-top: 5px;
+			}
+
+			
+		}
+
+
+		textarea{
+			margin-top: 30px;
+			height: 150px;
+		}
+
+		#pic{
+			width: 50px;
+			padding: 0px;
+			margin: 0px;
+
+
+		 	img{
+		 		width: 25px;
+		 		margin: 0px;
+		 		margin-top: 5px;
+		 		padding: 0px;
+		 	}
+		}
+
+	}
+
+
+	#happy_post{
+
+			border: $border;
+			margin-top: 10px;
+			p{
+				padding: 10px 10px;
+				font-size: 13px;
+				margin-top: 10px;
+			}
+
+			#date{
+				float: right;
+				margin-right: 30px;
+			}
+
+	}
+
+
+	#menu{
+		
+		
+		margin-top: 305px;
+		border: $border;
+		
+		li{
+			padding-top: 20px;
+			margin-bottom: 20px;
+			border-top: 1px solid $yellow;
+			/*border-bottom: 1px solid $yellow;*/
+			padding-left: 20px;
+		}
+
+
+	}
+
+
+}
+
+
+
+form{
+
+	h4{
+		font-size: 20px;
+		margin-top: 50px;
+		text-align: center;
+	}
+
+	input{
+		font-size: 11px;
+		margin-bottom: 30px;
+	}
+
+	#form-inputs{
+		margin-top: 50px;
+	}
+
+}
+
+
+
