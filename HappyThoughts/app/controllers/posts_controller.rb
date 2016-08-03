@@ -3,6 +3,16 @@ class PostsController < ApplicationController
 		@posts = Post.all
 		@post = Post.new
 		@user = User.find(current_user.id)
+		@quote_api_key = Rails.application.secrets.quote_api_key
+		@response = Unirest.post "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
+														  headers:{
+														    "X-Mashape-Key" => @quote_api_key,
+														    "Content-Type" => "application/x-www-form-urlencoded",
+														    "Accept" => "application/json"
+														  }
+		data = @response.body
+		@daily_quote = data["quote"]
+		@author = data["author"]
 	end
 
 	def create
