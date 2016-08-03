@@ -14,12 +14,11 @@
 
 ActiveRecord::Schema.define(version: 20160803151538) do
 
-
   create_table "posts", force: :cascade do |t|
+    t.string   "body"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "user_id"
-    t.string   "body"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
