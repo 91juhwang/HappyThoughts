@@ -6,7 +6,10 @@ class QuotesController < ApplicationController
 
 	def create
 		@quote = Quote.create(quote_params)
-		redirect_to "/quotes"
+
+		respond_to do |format|
+      format.js { render :create }
+    end
 	end
 
 	def destroy
