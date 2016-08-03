@@ -1,4 +1,7 @@
-<h1>this is profile page </h1>
+<%= @daily_quote %>
+<br>
+- <%= @author %>
+<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), :method => :post %>
 
 <hr>
 
@@ -13,8 +16,10 @@
 		<p>
 			User Id: <%= p.user_id %>
 			<br>
-			Contents: <%= p.body %>
+			Content: <%= p.body %>
 			<br>
+			Picture: <%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
+
 			<% if p.user_id == current_user.id %>
 				<%= link_to "Delete Post", post_path(p.id), :method => :delete, 
 						:data => {confirm: "Do you wish to delete your happy moment?"} %>
@@ -22,10 +27,8 @@
 		</p>
 	<% end %>
 <% end %>
-
 <hr>
 <h1>D3 Data Visualization Section (if we have time)</h1>
-
 <hr>
 <% if @posts != nil %>
 	<h1>All User Posts</h1>
@@ -33,6 +36,7 @@
 			<p>
 				User ID: <%= p.user_id %>
 				<br>
+				Pictures: <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
 				Contents: <%= p.body %>
 			</p>
 		<% end %>

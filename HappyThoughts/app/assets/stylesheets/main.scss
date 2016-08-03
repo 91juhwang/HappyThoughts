@@ -5,7 +5,50 @@ $grey:#ccc;
 $border: 1px solid #ccc;
 
 
+#invisible{
+	color: #fff;
+}
+
+
+.container{
+	/*border: $border;*/
+}
+
+/*Yield template */
 nav{
+	background-color: $yellow;
+	height: 55px;
+
+	ul{
+		float: right;
+		margin: 0px;
+	}
+
+	li{
+		
+		list-style-type: none;
+		float: left;
+		margin-right: 15px;
+		margin-top: 15px;
+	}
+
+	a{
+		color: white;	
+		letter-spacing: 1px;
+		text-decoration: none;
+
+	}
+
+
+	a:hover{
+		text-decoration: underline;
+		/*color: #ccc;*/
+	}
+}
+
+
+
+#personal{
 	height: 50px;
 	border-bottom: 1px solid $yellow;
 	#menu{
@@ -200,7 +243,9 @@ nav{
 
 
 
-form{
+#form_container{
+
+	/*background-color: $yellow;*/
 
 	h4{
 		font-size: 20px;
@@ -209,12 +254,14 @@ form{
 	}
 
 	input{
-		font-size: 11px;
+		/*font-size: 11px;*/
+		display: inline;
 		margin-bottom: 30px;
 	}
 
 	#form-inputs{
 		margin-top: 50px;
+
 	}
 
 }

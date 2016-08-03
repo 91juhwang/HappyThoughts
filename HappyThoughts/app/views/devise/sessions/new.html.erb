@@ -1,26 +1,35 @@
-<h2>Log in</h2>
+ <div class="container">
+      <div class="row">  
+         <div id="invisible" class="four columns">s</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+         <div id="form_container" class="four columns">
+              <h4>Log in</h4>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                 
+             
+                    <%= f.email_field :email, autofocus: true, placeholder:'email', class:'u-full-width'%>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+                    <%= f.password_field :password, autocomplete: "off", placeholder:'password', class:'u-full-width'%>
+            
+                  <% if devise_mapping.rememberable? -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+                   
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me %>
+   
+                  <% end -%>
 
-<%= render "devise/shared/links" %>
+               
+                    <%= f.submit "Log in", class:'u-full-width'%>
+            
+                <% end %>
+
+                <%= render "devise/shared/links" %>
+          </div>  
+        <div id="invisible" class="four columns">s</div>
+
+
+      </div>
+
+</div>
