@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css?family=Sacramento";
 #invisible {
   color: #fff; }
 
@@ -11,8 +12,19 @@ i {
 
 /*Yield template */
 nav {
-  background-color: #ffdb00;
+  box-shadow: 0px 1px 100px #f4f4f4;
+  border: 1px solid #f4f4f4;
   height: 55px; }
+  nav #logo {
+    text-align: center;
+    margin-left: 45%; }
+  nav span {
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+    margin: 0px;
+    color: #ffdb00; }
+  nav #black {
+    color: #4f4f4f; }
   nav ul {
     float: right;
     margin: 0px; }
@@ -23,7 +35,7 @@ nav {
     margin-top: 15px; }
   nav a {
     font-weight: 600;
-    color: white;
+    color: #4f4f4f;
     letter-spacing: 1px;
     text-decoration: none; }
   nav a:hover {
@@ -69,8 +81,8 @@ nav {
     margin-left: 40%;
     width: 25%; }
   #home h6 {
-    font-size: 14px;
-    margin-top: 180px;
+    font-size: 15px;
+    margin-top: 60px;
     text-align: center; }
   #home p {
     font-size: 12px;
