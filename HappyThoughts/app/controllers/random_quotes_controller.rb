@@ -13,7 +13,7 @@ class RandomQuotesController < ApplicationController
 		@author = data["author"]
 		
 		respond_to do |format|
-			format.js { render :new }
+			format.js
 		end
 	end
 
