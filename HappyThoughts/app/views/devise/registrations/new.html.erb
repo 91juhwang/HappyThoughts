@@ -9,6 +9,9 @@
                       <%= devise_error_messages! %>
 
                       <%= f.email_field :email, autofocus: true, placeholder:'email', class:'u-full-width'%>
+                        
+                        <%= f.label :username %> <br />
+                        <%= f.text_field :username %>
 
                         <%= f.label :password %>
                         <% if @minimum_password_length %>
