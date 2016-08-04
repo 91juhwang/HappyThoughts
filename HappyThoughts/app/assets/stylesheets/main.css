@@ -1,6 +1,11 @@
 #invisible {
   color: #fff; }
 
+i {
+  font-size: 14px;
+  font-weight: 900;
+  color: #ccc; }
+
 .container {
   /*border: $border;*/ }
 
@@ -17,6 +22,7 @@ nav {
     margin-right: 15px;
     margin-top: 15px; }
   nav a {
+    font-weight: 600;
     color: white;
     letter-spacing: 1px;
     text-decoration: none; }
@@ -56,51 +62,51 @@ nav {
       margin-top: 5px;
       width: 30px; }
 
-#welcome {
+#home {
   height: 570px; }
-  #welcome img {
+  #home img {
     margin-top: 70px;
     margin-left: 40%;
     width: 25%; }
-  #welcome h6 {
+  #home h6 {
     font-size: 14px;
     margin-top: 180px;
     text-align: center; }
-  #welcome p {
+  #home p {
     font-size: 12px;
     text-align: center; }
-  #welcome #primary {
+  #home #primary {
     margin-top: 20px;
     background-color: #ffdb00;
     border: white;
     color: white; }
-  #welcome #quote {
+  #home #quote {
     margin-top: 150px;
     height: 200px;
     /*border: 1px solid #ccc;*/ }
-    #welcome #quote h5 {
+    #home #quote h5 {
       color: #4f4f4f;
       text-align: center; }
-    #welcome #quote h6 {
+    #home #quote h6 {
       font-size: 12px;
       text-transform: uppercase;
       font-weight: 600;
       margin-top: 80px;
       /*border: 1px solid #ccc;*/ }
-  #welcome #tho nav {
+  #home #tho nav {
     background-color: white;
     border-bottom: 1px solid #ffdb00; }
-    #welcome #tho nav #words {
+    #home #tho nav #words {
       font-size: 13px;
       letter-spacing: 1px;
       margin-left: 160px;
       color: #ccc;
       font-weight: 100; }
-    #welcome #tho nav #close {
+    #home #tho nav #close {
       font-size: 25px;
       font-weight: 100;
       color: #4f4f4f; }
-    #welcome #tho nav #happy_b {
+    #home #tho nav #happy_b {
       background-color: #ffed7f;
       border: none;
       color: #fff;
@@ -108,32 +114,39 @@ nav {
       padding-left: 10px;
       float: right;
       margin-top: 5px; }
-  #welcome #tho textarea {
+  #home #tho textarea {
     margin-top: 30px;
-    height: 150px; }
-  #welcome #tho #pic {
+    height: 130px; }
+  #home #tho #pic {
+    margin-top: 10px;
     width: 50px;
-    padding: 0px;
-    margin: 0px; }
-    #welcome #tho #pic img {
+    padding: 0px; }
+    #home #tho #pic img {
       width: 25px;
       margin: 0px;
       margin-top: 5px;
       padding: 0px; }
-  #welcome #happy_post {
+  #home #happy_post {
     border: 1px solid #ccc;
-    margin-top: 10px; }
-    #welcome #happy_post p {
+    margin-top: 10px;
+    border-radius: 4px; }
+    #home #happy_post a {
+      color: black;
+      text-decoration: none; }
+    #home #happy_post #close {
+      float: right;
+      margin-right: 10px; }
+    #home #happy_post p {
       padding: 10px 10px;
-      font-size: 13px;
+      font-size: 12pt;
       margin-top: 10px; }
-    #welcome #happy_post #date {
+    #home #happy_post #date {
       float: right;
       margin-right: 30px; }
-  #welcome #menu {
+  #home #menu {
     margin-top: 305px;
     border: 1px solid #ccc; }
-    #welcome #menu li {
+    #home #menu li {
       padding-top: 20px;
       margin-bottom: 20px;
       border-top: 1px solid #ffdb00;

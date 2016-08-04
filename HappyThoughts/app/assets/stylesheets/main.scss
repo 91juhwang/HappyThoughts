@@ -10,6 +10,13 @@ $border: 1px solid #ccc;
 }
 
 
+
+i{
+	font-size: 14px;
+	font-weight: 900;
+	color: $grey;
+}
+
 .container{
 	/*border: $border;*/
 }
@@ -33,6 +40,7 @@ nav{
 	}
 
 	a{
+		font-weight: 600;
 		color: white;	
 		letter-spacing: 1px;
 		text-decoration: none;
@@ -96,7 +104,7 @@ nav{
 }
 
 
-#welcome{
+#home{
 
 	height: 570px;
 
@@ -183,14 +191,13 @@ nav{
 
 		textarea{
 			margin-top: 30px;
-			height: 150px;
+			height: 130px;
 		}
 
 		#pic{
+			margin-top: 10px;
 			width: 50px;
 			padding: 0px;
-			margin: 0px;
-
 
 		 	img{
 		 		width: 25px;
@@ -207,9 +214,28 @@ nav{
 
 			border: $border;
 			margin-top: 10px;
+			border-radius: 4px;
+
+
+
+			a{
+					color: black;
+					text-decoration: none;
+			}
+
+			a:hover{
+
+			}
+
+			#close{
+				float: right;
+			
+				margin-right: 10px;
+			}
+
 			p{
 				padding: 10px 10px;
-				font-size: 13px;
+				font-size: 12pt;
 				margin-top: 10px;
 			}
 

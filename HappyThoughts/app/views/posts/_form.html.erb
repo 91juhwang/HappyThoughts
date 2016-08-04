@@ -15,20 +15,29 @@
 	</div>
 
 	<div id="post_div">
-		<p>
-			Tell us about your Happy Thoughts!
-			<br>
+			
+			<%= f.text_area :body, placeholder:'Today some happiness happened when   ...', class:'u-full-width'%>
+	
 
-			<%=f.label :image %><br>
-			<%=f.file_field :image %>
-			<br>
-			<%= f.text_field :body %>
-		</p>
 
-		<p>
-			<%= f.submit %>
-		</p>
+				 <!-- <button id="pic"> -->
+						<!-- <%= f.file_field :image , id:'pic'%> -->
+                 <!-- </button> -->
+
+
+			<%= f.submit 'happy', id:'happy_b' %>
+
+
+     		
+
+
+
+
+
 
 		<%= f.hidden_field :user_id, :value => current_user.id %>
 	</div>
+
+
+
 <% end %>
