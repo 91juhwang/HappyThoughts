@@ -17,6 +17,7 @@ nav {
     margin-right: 15px;
     margin-top: 15px; }
   nav a {
+    font-weight: 600;
     color: white;
     letter-spacing: 1px;
     text-decoration: none; }
