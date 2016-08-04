@@ -1,21 +1,22 @@
 
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
+<div class="container">
+    <div id="home" class="row"> 
+   		<div id="quote" class="twelve columns">	
 
-	<div id="daily_quote">
-		<%= @daily_quote %>
-	</div>
-	<div id="quote_author">
-			- <%= @author %>
-	</div>
+   			<div id="saving_quote">
+				<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
+			</div>
+			<h5> <%= @daily_quote %></h5>
+			<h6> <%= @author %></h6>
 
-<div id="saving_quote">
-	<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
+			<div id="quote_generator">
+				<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
+			</div>
+
 </div>
-
-<div id="quote_generator">
-	<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
+	</div>
 </div>
-		<hr>
 
 <!-- /////////////////CREATE A POST DROP DOWN /////////////////////////////////-->
 
@@ -34,8 +35,8 @@
 												:data => {confirm: "Do you wish to delete your happy moment?"} %>
 									</div>
 								<% end %>
-									<p><%= p.body %></p>
 									Date: <%= p.created_at.strftime("%D") %>
+									<p><%= p.body %></p>
 									Username: <%= p.user.username %>
 									
 									Picture: <%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
