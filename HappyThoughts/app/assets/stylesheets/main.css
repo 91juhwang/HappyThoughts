@@ -1,6 +1,11 @@
 #invisible {
   color: #fff; }
 
+i {
+  font-size: 14px;
+  font-weight: 900;
+  color: #ccc; }
+
 .container {
   /*border: $border;*/ }
 
@@ -113,9 +118,9 @@ nav {
     margin-top: 30px;
     height: 130px; }
   #home #tho #pic {
+    margin-top: 10px;
     width: 50px;
-    padding: 0px;
-    margin: 0px; }
+    padding: 0px; }
     #home #tho #pic img {
       width: 25px;
       margin: 0px;

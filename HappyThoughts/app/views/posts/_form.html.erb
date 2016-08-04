@@ -18,8 +18,22 @@
 			
 			<%= f.text_area :body, placeholder:'Today some happiness happened when   ...', class:'u-full-width'%>
 	
+
+
+				 <!-- <button id="pic"> -->
+						<!-- <%= f.file_field :image , id:'pic'%> -->
+                 <!-- </button> -->
+
+
 			<%= f.submit 'happy', id:'happy_b' %>
-			<%= f.file_field :image, id:'pic'%>
+
+
+     		
+
+
+
+
+
 
 		<%= f.hidden_field :user_id, :value => current_user.id %>
 	</div>

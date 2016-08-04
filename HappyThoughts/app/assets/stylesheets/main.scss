@@ -10,6 +10,13 @@ $border: 1px solid #ccc;
 }
 
 
+
+i{
+	font-size: 14px;
+	font-weight: 900;
+	color: $grey;
+}
+
 .container{
 	/*border: $border;*/
 }
@@ -188,10 +195,9 @@ nav{
 		}
 
 		#pic{
+			margin-top: 10px;
 			width: 50px;
 			padding: 0px;
-			margin: 0px;
-
 
 		 	img{
 		 		width: 25px;
@@ -218,7 +224,7 @@ nav{
 			}
 
 			a:hover{
-				
+
 			}
 
 			#close{
