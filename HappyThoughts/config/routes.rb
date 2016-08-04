@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :quotes
-  resources :random, only: [:create, :destroy]
 
   get "/random", to: "random_quotes#new", as: "new_random_quote"
 

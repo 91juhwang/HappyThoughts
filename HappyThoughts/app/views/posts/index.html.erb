@@ -1,12 +1,11 @@
-
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
 
-	<div id="daily_quote">
-		<%= @daily_quote %>
-	</div>
-	<div id="quote_author">
-			- <%= @author %>
-	</div>
+<div id="daily_quote">
+	<%= @daily_quote %>
+</div>
+<div id="quote_author">
+		- <%= @author %>
+</div>
 
 <div id="saving_quote">
 	<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
@@ -41,9 +40,9 @@
 									Picture: <%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
 
 						 </div> 
+					<% end %>
 				<% end %>
-			<% end %>
-       </div> 
+      </div> 
          <!-- <div id="invisible" class="three columns">s</div> -->
 	</div>
 </div>
