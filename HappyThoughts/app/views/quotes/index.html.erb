@@ -1,10 +1,18 @@
-<% @user.quotes.each do |q| %>
-<%= q.quotes %>
-<br>
-- <%= q.author %>
-<br>
-<%= link_to "delete", quote_path(:id => q.id), 
-		:method => :delete, 
-		:data => { confirm: "Do you wish to delete your quote?" } %>
-<hr>
-<% end %>
+<div class="container">
+     <div id="home" class="row"> 
+		<% @user.quotes.each do |q| %>
+			 <div id="quote" class="twelve columns">			
+				<h5><%= q.quotes %> asdasdasdasd</h5>
+				<h6><%= q.author %> asdasdasd</h6>
+				
+					<%= link_to "delete", quote_path(:id => q.id), 
+							:method => :delete, 
+							:data => { confirm: "Do you wish to delete your quote?" } %>
+			 </div>  
+		<% end %>
+	</div>
+</div>
+
+
+             
+        
