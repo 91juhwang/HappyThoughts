@@ -39,6 +39,8 @@
 	</nav>
 <% end %>	
 
+<%= flash[:error] if flash[:error] %>
+
 
 <%= yield %>
 
