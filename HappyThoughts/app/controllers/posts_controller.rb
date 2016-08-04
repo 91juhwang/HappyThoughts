@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+	before_action :user_redirect
+
 	def index
 		@posts = Post.all
 		@post = Post.new
@@ -35,6 +37,13 @@ class PostsController < ApplicationController
 	private
 		def post_params
 			params.require(:post).permit(:body, :user_id, :image)
+		end
+
+		def user_redirect
+			if !current_user
+				flash[:error] = "You must be logged in to access this page"
+				redirect_to "/"
+			end
 		end
 
 end
