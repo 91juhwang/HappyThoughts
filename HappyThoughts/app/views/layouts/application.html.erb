@@ -31,14 +31,17 @@
 <!-- if the user is signed in -->
 <% if user_signed_in? %>
 	<nav>	
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/posts">Profile</a></li>
-				<li><a href="/quotes">Favorites Quotes</a></li> 
-				<li><a href="/users/edit">Settings</a></li> 
-				<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %> </li>
-			</ul>
-	
+		<span id="logo">
+			<span>happy</span>
+			<span id="black">thoughts</span>
+		</span>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/posts">Profile</a></li>
+			<li><a href="/quotes">Favorites</a></li> 
+			<li><a href="/users/edit">Settings</a></li> 
+			<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %> </li>
+		</ul>
 	</nav>
 <% end %>	
 
