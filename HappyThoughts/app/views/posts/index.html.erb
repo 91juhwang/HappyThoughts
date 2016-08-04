@@ -22,7 +22,7 @@
 <% if @posts != nil %>
 	<% @user.posts.each do |p| %>
 		<p>
-			User Id: <%= p.user_id %>
+			Date: <%= p.created_at.strftime("%D") %>
 			<br>
 			Content: <%= p.body %>
 			<br>
@@ -42,7 +42,8 @@
 	<h1>All User Posts</h1>
 		<% @posts.each do |p| %>
 			<p>
-				User ID: <%= p.user_id %>
+				Date Created: <%= p.created_at.strftime("%D") %>
+				User Email: <%= p.user.email %>
 				<br>
 				Pictures: <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
 				Contents: <%= p.body %>
