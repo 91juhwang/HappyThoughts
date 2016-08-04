@@ -2,8 +2,8 @@
      <div id="home" class="row"> 
 		<% @user.quotes.each do |q| %>
 			 <div id="quote" class="twelve columns">			
-				<h5><%= q.quotes %> asdasdasdasd</h5>
-				<h6><%= q.author %> asdasdasd</h6>
+				<h5><%= q.quotes %> </h5>
+				<h6><%= q.author %> </h6>
 				
 					<%= link_to "delete", quote_path(:id => q.id), 
 							:method => :delete, 
