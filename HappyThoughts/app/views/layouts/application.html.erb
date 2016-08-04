@@ -8,29 +8,38 @@
 </head>
 <body>
 
-	<nav>
-		<% if !user_signed_in? %>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="/users/sign-up">Sign Up</a></li>
-				<li><a href="/users/login">Log In</a></li>
-			</ul>
-		<% end %> 
-	</nav>
+<!-- if the user is not signed in  -->
+<% if !user_signed_in? %>
+
+			<nav>
+				
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="/users/sign-up">Sign Up</a></li>
+						<li><a href="/users/login">Log In</a></li>
+					</ul>
+				
+			</nav>
+<% end %> 
 
 
-<!-- 	<nav>	
-		<% if user_signed_in? %>
+<!-- if the user is signed in -->
+<% if user_signed_in? %>
+	<nav>	
+
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="/posts">Profile</a></li> 
-				<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
+				<li><a href="/posts">Home</a></li>
+				<li><a href="#about">Favorites</a></li>
+				<li><a href="/posts">Archive</a></li> 
+				<li><a href="/posts">Settings</a></li> 
+				<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %> </li>
 			</ul>
-		<% end %>	
-	</nav> -->
 	
+	</nav>
+<% end %>	
+
+
 <%= yield %>
 
 </body>

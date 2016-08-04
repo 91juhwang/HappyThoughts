@@ -5,6 +5,11 @@
 		- <%= @author %>
 </div>
 
+
+<!-- ///////////QUOTES VISUALIZATION //////////////-->
+
+
+
 <div id="saving_quote">
 <%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
 </div>
@@ -13,6 +18,11 @@
 	<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
 </div>
 <hr>
+<!-- /////////////////CREATE A POST DROP DOWN /////////////////////////////////-->
+
+
+
+
 
 <h1>Create Post</h1>
 <%= render "form" %>
@@ -36,8 +46,8 @@
 	<% end %>
 <% end %>
 <hr>
-<h1>D3 Data Visualization Section (if we have time)</h1>
-<hr>
+<!-- <h1>D3 Data Visualization Section (if we have time)</h1> -->
+<!-- <hr> -->
 <% if @posts != nil %>
 	<h1>All User Posts</h1>
 		<% @posts.each do |p| %>
