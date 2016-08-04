@@ -1,64 +1,91 @@
-<div id="daily_quote">
-	<%= @daily_quote %>
-</div>
-<div id="quote_author">
-		- <%= @author %>
-</div>
+
+<!-- ///////////QUOTES VISUALIZATION //////////////-->
+
+<!-- 
+		<div id="daily_quote">
+			<%= @daily_quote %>
+		</div>
+		<div id="quote_author">
+				- <%= @author %>
+		</div> -->
 
 
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
 
 
 
-<div id="saving_quote">
-<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
-</div>
+<!-- 		<div id="saving_quote">
+		<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
+		</div>
 
-<div id="quote_generator">
-	<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
-</div>
-<hr>
+		<div id="quote_generator">
+			<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
+		</div>
+		<hr>
+
+ -->
+
 <!-- /////////////////CREATE A POST DROP DOWN /////////////////////////////////-->
 
 
+<div class="container">
+     <div id="home" class="row">     
+     	<!-- <div id="invisible" class="three columns">s</div> -->
+		<div id="tho" class="twelve columns">
+
+					<!-- <h1>Create Post</h1> -->
+					<%= render "form" %>
+
+				
+					<!-- <h1>Show Personal Posts</h1> -->
+
+
+					<% if @posts != nil %>
+						<% @user.posts.each do |p| %>
+
+							<div id="happy_post" class="twelve columns">
+									
+										<% if p.user_id == current_user.id %>
+
+										<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
+													:data => {confirm: "Do you wish to delete your happy moment?"} %>
+													
+										</div>
+
+										<% end %>
+
+										<p><%= p.body %></p>
+										
+										Picture: <%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
+	
+							 </div> 
+					<% end %>
+				<% end %>
+         </div> 
+         <!-- <div id="invisible" class="three columns">s</div> -->
+	</div>
+</div>
 
 
 
-<h1>Create Post</h1>
-<%= render "form" %>
 
-<hr>
-<h1>Show Personal Posts</h1>
-<% if @posts != nil %>
-	<% @user.posts.each do |p| %>
-		<p>
-			User Id: <%= p.user_id %>
-			<br>
-			Content: <%= p.body %>
-			<br>
-			Picture: <%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
+<!-- /////////////////DISPLAY ALL POSTS /////////////////////////////////-->
 
-			<% if p.user_id == current_user.id %>
-				<%= link_to "Delete Post", post_path(p.id), :method => :delete, 
-						:data => {confirm: "Do you wish to delete your happy moment?"} %>
-			<% end %>
-		</p>
-	<% end %>
-<% end %>
-<hr>
+
+
 <!-- <h1>D3 Data Visualization Section (if we have time)</h1> -->
 <!-- <hr> -->
-<% if @posts != nil %>
-	<h1>All User Posts</h1>
-		<% @posts.each do |p| %>
-			<p>
-				User ID: <%= p.user_id %>
-				<br>
-				Pictures: <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
-				Contents: <%= p.body %>
-			</p>
-		<% end %>
-<% end %>
+<!-- <% if @posts != nil %> -->
+	<!-- <h1>All User Posts</h1> -->
+		<!-- <% @posts.each do |p| %> -->
+			<!-- <p> -->
+				<!-- User ID: <%= p.user_id %> -->
+				<!-- <br> -->
+				<!-- Pictures: <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %> -->
+				<!-- Contents: <%= p.body %> -->
+			<!-- </p> -->
+		<!-- <% end %> -->
+<!-- <% end %> -->
 
 
 
