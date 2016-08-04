@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-  # before_action :user_redirect
 
 
   protected
@@ -14,12 +13,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
   end
 
-  # def user_redirect
-  #   if !current_user
-  #     redirect_to "/"
-  #   else
-  #     redirect_to p
-  #   end
-  # end
+def after_sign_in_path_for(resource)
+  posts_path
+end
 
 end
