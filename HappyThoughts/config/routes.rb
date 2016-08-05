@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :quotes
  
   get "/random", to: "random_quotes#new", as: "new_random_quote"
-
+  get "/d3_data", to: "random_quotes#d3_data", as: "d3_data" 
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

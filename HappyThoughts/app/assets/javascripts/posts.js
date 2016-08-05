@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	console.log(my_data)
 
+	d3.json(d3_data_path, function(){
+
+
+	})
 	var width = 800
 	var height = 600
 
