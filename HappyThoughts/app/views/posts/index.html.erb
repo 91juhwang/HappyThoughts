@@ -1,5 +1,12 @@
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
 <!-- <h8><%= @thoughts_json %></h8> -->
+<div id="visual_container">
+
+</div>
+<!-- JS script in  -->
+<!-- <%= javascript_tag do %>
+  alert("My example alert box.");
+<% end %> -->
 
 <div class="container">
     <div id="home" class="row"> 
@@ -48,3 +55,6 @@
 
 	</div>
 </div>	
+<script type="text/javascript"> 
+	var my_data = "<%= j @thoughts_json %>"
+</script>
