@@ -31,12 +31,13 @@
 <!-- if the user is signed in -->
 <% if user_signed_in? %>
 	<nav>	
-		<span id="logo">
-			<span>happy</span>
-			<span id="black">thoughts</span>
-		</span>
+		<a href="/">
+			<span id="logo">
+				<span>happy</span>
+				<span id="black">thoughts</span>
+			</span>
+		</a>
 		<ul>
-			<li><a href="/">Home</a></li>
 			<li><a href="/posts">Profile</a></li>
 			<li><a href="/quotes">Favorites</a></li> 
 			<li><a href="/users/edit">Settings</a></li> 

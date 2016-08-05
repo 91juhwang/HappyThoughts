@@ -1,13 +1,15 @@
 <div class="container">
      <div id="home" class="row"> 
 		<% @user.quotes.each do |q| %>
-			 <div id="quote" class="twelve columns">			
+			 <div id="quote" class="twelve columns">		
+			 	<div id="close">				
+					<%= link_to "X", quote_path(:id => q.id), 
+							:method => :delete, 
+							:data => { confirm: "Do you wish to delete your quote?" } %>
+				</div>	
 				<h5><%= q.quotes %> </h5>
 				<h6><%= q.author %> </h6>
 				
-					<%= link_to "delete", quote_path(:id => q.id), 
-							:method => :delete, 
-							:data => { confirm: "Do you wish to delete your quote?" } %>
 			 </div>  
 		<% end %>
 	</div>
