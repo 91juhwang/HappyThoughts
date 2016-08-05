@@ -1,7 +1,5 @@
-
-=======
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
-<h5><%= @thoughts_json %></h5>
+<!-- <h8><%= @thoughts_json %></h8> -->
 
 <div class="container">
     <div id="home" class="row"> 
@@ -35,7 +33,7 @@
 											:data => {confirm: "Do you wish to delete your happy moment?"} %>
 								</div>
 							
-								Date: <%= p.created_at.strftime("%D") %>
+								<%= p.created_at.strftime("%D") %>
 								<p><%= p.body %></p>
 								Username: <%= p.user.username %>
 								

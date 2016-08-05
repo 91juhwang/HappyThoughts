@@ -14,7 +14,9 @@
 	</div>
 
 	<div id="post_div">
+
 		<%= f.text_area :body, placeholder:'Today some happiness happened when   ...', class:'u-full-width'%>
+		
 				<%= f.file_field :image%>
 				<%= f.submit 'happy', id:'happy_b' %>
 		<%= f.hidden_field :user_id, :value => current_user.id %>
