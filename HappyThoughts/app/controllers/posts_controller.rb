@@ -22,9 +22,11 @@ class PostsController < ApplicationController
 		@user.posts.each do |p| 
 			thoughts.push(p.body.split)
 		end
+
 		@thoughts_flatten = thoughts.flatten 
 		@thoughts_hash = counted_words(@thoughts_flatten) #function to count flattened words
 		@thoughts_json = @thoughts_hash.to_json #tansfering data to json
+
 	end
 
 	def create
