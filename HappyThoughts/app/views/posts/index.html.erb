@@ -1,10 +1,21 @@
+
+=======
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
+<h5><%= @thoughts_json %></h5>
+
 <div class="container">
     <div id="home" class="row"> 
-   		<div id="quote" class="twelve columns">	
+    	<!-- /////// CREATE A POST /////////////-->
+		<div id="tho" class="six columns">
+			<%= render "form" %>
+     	</div> 
+
+		<!-- /////// DISPLAY A QUOTE /////////////-->
+   		<div id="quote" class="six columns">	
    			<div id="saving_quote">
 				<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
 			</div>
+
 			<h5 id="daily_quote"> <%= @daily_quote %></h5>
 			<h6 id="quote_author"> <%= @author %></h6>
 
@@ -12,58 +23,30 @@
 				<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
 			</div>
 		</div>
-	</div>
-</div>
 
-<!-- /////////////////CREATE A POST DROP DOWN /////////////////////////////////-->
-
-<div class="container">
-   <div id="home" class="row">     
-     	<!-- <div id="invisible" class="three columns">s</div> -->
-			<div id="tho" class="twelve columns">
-				<!-- <h1>Create Post</h1> -->
-				<%= render "form" %>
-					<!-- <h1>Show Personal Posts</h1> -->
-					<% if @posts != nil %>
-						<% @user.posts.each do |p| %>
-							<div id="happy_post" class="twelve columns">
-								<% if p.user_id == current_user.id %>
-									<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
-												:data => {confirm: "Do you wish to delete your happy moment?"} %>
-									</div>
-								<% end %>
-									Date: <%= p.created_at.strftime("%D") %>
-									<p><%= p.body %></p>
-									Username: <%= p.user.username %>
-									
-									Picture: <%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
-
+		<!-- /////// DISPLAY ALL YOUR POSTS /////////////-->
+		<div  class="six columns ">
+			<% if @posts != nil %>
+				<% if @posts != nil %>
+					<% @user.posts.each do |p| %>
+						<div id="happy_post" class="twelve columns">
+							<% if p.user_id == current_user.id %>
+								<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
+											:data => {confirm: "Do you wish to delete your happy moment?"} %>
+								</div>
+							
+								Date: <%= p.created_at.strftime("%D") %>
+								<p><%= p.body %></p>
+								Username: <%= p.user.username %>
+								
+								Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %>
+							<% end %>
 						 </div> 
 					<% end %>
 				<% end %>
-      </div> 
-         <!-- <div id="invisible" class="three columns">s</div> -->
+			<% end %>
+		</div> 
+
+
 	</div>
-</div>
-
-<hr>
-
-
-<!-- /////////////////DISPLAY ALL POSTS /////////////////////////////////-->
-<!-- <h1>D3 Data Visualization Section (if we have time)</h1> -->
-<!-- <hr> -->
-<!-- <% if @posts != nil %> -->
-	<!-- <h1>All User Posts</h1> -->
-		<!-- <% @posts.each do |p| %> -->
-			<!-- <p> -->
-				<!-- User ID: <%= p.user_id %> -->
-				<!-- <br> -->
-				<!-- Pictures: <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %> -->
-				<!-- Contents: <%= p.body %> -->
-			<!-- </p> -->
-		<!-- <% end %> -->
-<!-- <% end %> -->
-
-
-
-
+</div>	
