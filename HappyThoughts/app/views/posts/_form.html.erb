@@ -1,5 +1,4 @@
 <%= form_for @post, html: { multipart: true } do |f| %>
-
 	<div id="error_messages">
 		<% if @post.errors.any? %>
 			<h3>
@@ -15,29 +14,10 @@
 	</div>
 
 	<div id="post_div">
-			
-			<%= f.text_area :body, placeholder:'Today some happiness happened when   ...', class:'u-full-width'%>
-	
-
-
-				 <!-- <button id="pic"> -->
-						<!-- <%= f.file_field :image , id:'pic'%> -->
-                 <!-- </button> -->
-
-
-			<%= f.submit 'happy', id:'happy_b' %>
-
-
-     		
-
-
-
-
-
-
+		<%= f.text_area :body, placeholder:'Today some happiness happened when   ...', class:'u-full-width'%>
+				<%= f.file_field :image%>
+				<%= f.submit 'happy', id:'happy_b' %>
 		<%= f.hidden_field :user_id, :value => current_user.id %>
 	</div>
-
-
 
 <% end %>

@@ -2,6 +2,9 @@
 #invisible {
   color: #fff; }
 
+#post_div {
+  margin-top: 100px; }
+
 i {
   font-size: 14px;
   font-weight: 900;
@@ -64,8 +67,6 @@ nav {
     text-align: center;
     border: none; }
   #personal #post {
-    /*	background-color: #fff;
-    	border-bottom:1px solid $yellow;*/
     width: 20%;
     float: left;
     height: 50px; }
@@ -76,16 +77,22 @@ nav {
 
 #home {
   height: 570px; }
+  #home #r_quote {
+    margin-top: 20px;
+    /*background-color: pink;*/
+    float: left; }
+    #home #r_quote a {
+      margin: 0px; }
   #home img {
     margin-top: 70px;
     margin-left: 40%;
     width: 25%; }
-  #home h6 {
-    font-size: 15px;
+  #home h5 {
+    font-size: 13pt;
     margin-top: 60px;
     text-align: center; }
   #home p {
-    font-size: 12px;
+    font-size: 12pt;
     text-align: center; }
   #home #primary {
     margin-top: 20px;
@@ -93,17 +100,32 @@ nav {
     border: white;
     color: white; }
   #home #quote {
-    margin-top: 150px;
-    height: 200px;
-    /*border: 1px solid #ccc;*/ }
+    border-radius: 5px;
+    margin-top: 50px;
+    height: 250px;
+    border: 1px solid #ccc;
+    padding: 10px 10px; }
+    #home #quote #close {
+      float: right;
+      margin-right: 10px;
+      color: #ccc; }
+    #home #quote #star {
+      width: 20px;
+      margin: 0px;
+      float: right;
+      margin-right: 10px;
+      margin-top: 10px; }
+    #home #quote #star:hover {
+      color: #ffdb00; }
     #home #quote h5 {
       color: #4f4f4f;
-      text-align: center; }
+      text-align: center;
+      font-size: 14pt; }
     #home #quote h6 {
-      font-size: 12px;
+      font-size: 13px;
       text-transform: uppercase;
-      font-weight: 600;
-      margin-top: 80px;
+      font-weight: 800;
+      margin-top: 50px;
       /*border: 1px solid #ccc;*/ }
   #home #tho nav {
     background-color: white;
@@ -127,8 +149,9 @@ nav {
       float: right;
       margin-top: 5px; }
   #home #tho textarea {
-    margin-top: 30px;
-    height: 130px; }
+    margin-top: 0px;
+    height: 150px;
+    border-top: 1px solid #ffdb00; }
   #home #tho #pic {
     margin-top: 10px;
     width: 50px;
@@ -139,9 +162,9 @@ nav {
       margin-top: 5px;
       padding: 0px; }
   #home #happy_post {
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    border-radius: 4px; }
+    border: 1px solid #ffdb00;
+    margin-top: 20px;
+    border-radius: 5px; }
     #home #happy_post a {
       color: black;
       text-decoration: none; }
