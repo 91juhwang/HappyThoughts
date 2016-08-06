@@ -103,7 +103,7 @@ nav {
     border-radius: 5px;
     margin-top: 50px;
     height: 250px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     padding: 10px 10px; }
     #home #quote #close {
       float: right;
@@ -117,15 +117,34 @@ nav {
       margin-top: 10px; }
     #home #quote #star:hover {
       color: #ffdb00; }
+    #home #quote #comilla_1 {
+      font-size: 50pt;
+      float: left;
+      font-family: Times;
+      color: #ccc; }
+    #home #quote #comilla_2 {
+      font-size: 50pt;
+      float: right;
+      font-family: Times;
+      color: #ccc; }
     #home #quote h5 {
+      font-family: Times;
+      letter-spacing: 1px;
       color: #4f4f4f;
       text-align: center;
-      font-size: 12pt; }
+      font-size: 15pt;
+      color: #4f4f4f;
+      /*border: $border;	*/ }
     #home #quote h6 {
-      font-size: 13px;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 12pt;
+      /*text-transform: uppercase;*/
+      font-weight: 500;
       margin-top: 30px;
+      float: right;
+      margin-right: 100px;
+      letter-spacing: 1px;
+      font-family: Times;
+      color: #ccc;
       /*border: 1px solid #ccc;*/ }
   #home #tho nav {
     background-color: white;

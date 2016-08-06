@@ -162,7 +162,7 @@ nav{
 		border-radius: 5px;
 		margin-top: 50px;
 		height: 250px;
-		border: 1px solid #ccc;
+		/*border: 1px solid #ccc;*/
 		padding: 10px 10px;
 
 
@@ -185,19 +185,42 @@ nav{
 		}
 
 
+		#comilla_1{
+			font-size: 50pt;
+			float: left;
+			font-family: Times;
+			color: $grey;
+		}
+
+		#comilla_2{
+			font-size: 50pt;
+			float: right;
+			font-family: Times;
+			color: $grey;
+		}
 	
 		h5{
+			font-family: Times;
+			letter-spacing: 1px;
 			color: $lightblack;
 			text-align: center;
-			font-size: 12pt;
+			font-size: 15pt;
+			color: $lightblack;
+			/*border: $border;	*/
+
 
 		}
 
 		h6{
-			font-size: 13px;
-			text-transform: uppercase;
-			font-weight: 800;
+			font-size: 12pt;
+			/*text-transform: uppercase;*/
+			font-weight: 500;
 			margin-top: 30px;
+			float: right;
+			margin-right: 100px;
+			letter-spacing: 1px;
+			font-family: Times;
+			color: $grey;
 			/*border: 1px solid #ccc;*/
 		}	
 
