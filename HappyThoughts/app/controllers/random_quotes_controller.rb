@@ -17,7 +17,7 @@ class RandomQuotesController < ApplicationController
 		end
 	end
 
-
+	# calling in JSON data as url 
 	def d3_data
 		@posts = Post.all
 		@user = User.find(current_user.id)
