@@ -38,16 +38,21 @@
 			<div  class="six columns ">
 				<% if @posts != nil %>
 					<% if @posts != nil %>
-						<% @user.posts.each do |p| %>
+						<% @user.posts.reverse.each do |p| %>
 							<div id="happy_post" class="twelve columns">
 								<% if p.user_id == current_user.id %>
 									<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
 												:data => {confirm: "Do you wish to delete your happy moment?"} %>
 									</div>
-								
-									<span id="time"><%= p.created_at.strftime("%D") %></span>
+									<div id="time">
+										<%= p.created_at.strftime("%D") %>
+									</div>
+									
+									<div id="name">
+									-	<%= p.user.username %>
+									</div>
 									<p><%= p.body %></p>
-									<!-- Username: <%= p.user.username %> -->
+									
 									
 									<!-- Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %> -->
 								<% end %>
