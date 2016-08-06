@@ -180,11 +180,7 @@ nav{
 			margin-right: 10px;
 			margin-top: 10px;
 		}
-
-		#star:hover{
-			color: $yellow;
-		}
-
+ 
 
 		#comilla_1{
 			font-size: 50pt;
@@ -221,7 +217,7 @@ nav{
 			letter-spacing: 1px;
 			color: $grey;
 			/*font-family: 'Italianno', cursive;*/
-			font-family: Garamond;
+			/*font-family: Garamond;*/
 			/*border: 1px solid #ccc;*/
 		}	
 
@@ -327,10 +323,13 @@ nav{
 			}
 
 			p{
-				padding: 10px 10px;
+				padding: 10px 30px;
 				font-size: 11pt;
 				margin-top: 10px;
 				letter-spacing: 1px;
+				text-align: left;
+				clear: left;
+
 			}
 
 			#time{
@@ -339,7 +338,21 @@ nav{
 				/*background:#ccc;*/
 				color: #ccc;
 				letter-spacing: 2px;
-				font-family: helvetica;
+				/*font-family: helvetica;*/
+				font-weight: 100;
+				font-size: 9pt;
+				float: left;
+			}
+
+
+			#name{
+				/*border: 1px solid grey;*/
+				margin-top: 20px;
+				float: left;
+				margin-left:8px;
+				color: #ccc;
+				letter-spacing: 2px;
+				/*font-family: helvetica;*/
 				font-weight: 100;
 				font-size: 9pt;
 			}
