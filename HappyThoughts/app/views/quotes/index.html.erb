@@ -7,9 +7,11 @@
 							:method => :delete, 
 							:data => { confirm: "Do you wish to delete your quote?" } %>
 				</div>	
+				<span id="comilla_1"> “ </span>
+				<span id="comilla_2"> ” </span>
 				<h5><%= q.quotes %> </h5>
-				<h6><%= q.author %> </h6>
-				
+				<h6> - <%= q.author %> </h6>
+
 			 </div>  
 		<% end %>
 	</div>

@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Sacramento";
+@import "https://fonts.googleapis.com/css?family=Italianno";
 #invisible {
   color: #fff; }
 
@@ -76,7 +77,8 @@ nav {
       width: 30px; }
 
 #home {
-  height: 570px; }
+  height: 570px;
+  /*///////////////*/ }
   #home #r_quote {
     margin-top: 20px;
     /*background-color: pink;*/
@@ -128,7 +130,7 @@ nav {
       font-family: Times;
       color: #ccc; }
     #home #quote h5 {
-      font-family: Times;
+      font-family: Garamond;
       letter-spacing: 1px;
       color: #4f4f4f;
       text-align: center;
@@ -136,67 +138,86 @@ nav {
       color: #4f4f4f;
       /*border: $border;	*/ }
     #home #quote h6 {
-      font-size: 12pt;
+      font-size: 15pt;
       /*text-transform: uppercase;*/
-      font-weight: 500;
       margin-top: 30px;
       float: right;
       margin-right: 100px;
       letter-spacing: 1px;
-      font-family: Times;
       color: #ccc;
+      /*font-family: 'Italianno', cursive;*/
+      font-family: Garamond;
       /*border: 1px solid #ccc;*/ }
-  #home #tho nav {
-    background-color: white;
-    border-bottom: 1px solid #ffdb00; }
-    #home #tho nav #words {
-      font-size: 13px;
-      letter-spacing: 1px;
-      margin-left: 160px;
-      color: #ccc;
-      font-weight: 100; }
-    #home #tho nav #close {
-      font-size: 25px;
-      font-weight: 100;
-      color: #4f4f4f; }
-    #home #tho nav #happy_b {
-      background-color: #ffed7f;
-      border: none;
-      color: #fff;
-      width: 60px;
-      padding-left: 10px;
-      float: right;
-      margin-top: 5px; }
-  #home #tho textarea {
-    margin-top: 0px;
-    height: 150px;
-    border-top: 1px solid #ffdb00; }
-  #home #tho #pic {
-    margin-top: 10px;
-    width: 50px;
-    padding: 0px; }
-    #home #tho #pic img {
-      width: 25px;
+  #home #post_container {
+    /*background: #ccc;*/
+    margin-top: 50px;
+    padding-top: 100px;
+    border-top: 1px solid #ccc; }
+    #home #post_container #tho {
       margin: 0px;
-      margin-top: 5px;
       padding: 0px; }
-  #home #happy_post {
-    border: 1px solid #ffdb00;
-    margin-top: 20px;
-    border-radius: 5px; }
-    #home #happy_post a {
-      color: black;
-      text-decoration: none; }
-    #home #happy_post #close {
-      float: right;
-      margin-right: 10px; }
-    #home #happy_post p {
-      padding: 10px 10px;
-      font-size: 12pt;
-      margin-top: 10px; }
-    #home #happy_post #date {
-      float: right;
-      margin-right: 30px; }
+      #home #post_container #tho nav {
+        background-color: white;
+        border-bottom: 1px solid #ffdb00; }
+        #home #post_container #tho nav #words {
+          font-size: 13px;
+          letter-spacing: 1px;
+          margin-left: 160px;
+          color: #ccc;
+          font-weight: 100; }
+        #home #post_container #tho nav #close {
+          font-size: 25px;
+          font-weight: 100;
+          color: #4f4f4f; }
+        #home #post_container #tho nav #happy_b {
+          background-color: #ffed7f;
+          border: none;
+          color: #fff;
+          width: 60px;
+          padding-left: 10px;
+          float: right;
+          margin-top: 5px; }
+      #home #post_container #tho textarea {
+        border: none;
+        border-top: 1px solid #ffdb00;
+        box-shadow: 0px 1px 100px #f4f4f4;
+        height: 120px;
+        letter-spacing: 2px;
+        padding: 20px;
+        font-size: 11pt; }
+      #home #post_container #tho #pic {
+        margin-top: 10px;
+        width: 50px;
+        padding: 0px; }
+        #home #post_container #tho #pic img {
+          width: 25px;
+          margin: 0px;
+          margin-top: 5px;
+          padding: 0px; }
+    #home #post_container #happy_post {
+      box-shadow: 0px 1px 100px #f4f4f4;
+      border-top: 1px solid #f4f4f4;
+      margin-bottom: 20px; }
+      #home #post_container #happy_post a {
+        color: black;
+        text-decoration: none; }
+      #home #post_container #happy_post #close {
+        float: right;
+        margin-right: 10px; }
+      #home #post_container #happy_post p {
+        padding: 10px 10px;
+        font-size: 11pt;
+        margin-top: 10px;
+        letter-spacing: 1px; }
+      #home #post_container #happy_post #time {
+        margin-top: 20px;
+        margin-left: 20px;
+        /*background:#ccc;*/
+        color: #ccc;
+        letter-spacing: 2px;
+        font-family: helvetica;
+        font-weight: 100;
+        font-size: 9pt; }
   #home #menu {
     margin-top: 305px;
     border: 1px solid #ccc; }
