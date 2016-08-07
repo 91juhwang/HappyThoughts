@@ -10,47 +10,59 @@
 
 <div class="container">
     <div id="home" class="row"> 
-    	<!-- /////// CREATE A POST /////////////-->
-		<div id="tho" class="six columns">
-			<%= render "form" %>
-     	</div> 
-
 		<!-- /////// DISPLAY A QUOTE /////////////-->
-   		<div id="quote" class="six columns">	
-   			<div id="saving_quote">
+   		<div id="quote" class="twelve columns">	
+   			<!-- <div id="saving_quote">
 				<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
-			</div>
+			</div> -->
 
-			<h5 id="daily_quote"> <%= @daily_quote %></h5>
-			<h6 id="quote_author"> <%= @author %></h6>
-
+			<span id="comilla_1"> “ </span>
+			<span id="comilla_2"> ” </span>
+			<h5 id="daily_quote"> <%= @daily_quote %> </h5>
+			<h6 id="quote_author"> - <%= @author %></h6>
+		
 			<div id="quote_generator">
-				<%= link_to "Show a different quote", new_random_quote_path, remote: true %>
+				<!-- <%= link_to "Show a different quote", new_random_quote_path, remote: true %> -->
 			</div>
 		</div>
 
-		<!-- /////// DISPLAY ALL YOUR POSTS /////////////-->
-		<div  class="six columns ">
-			<% if @posts != nil %>
+			<!-- /////// CONTAINER POSTS  /////////////-->
+
+		<div  id="post_container" class="twelve columns">
+			<!-- /////// CREATE A POST /////////////-->
+			<div id="tho" class="six columns">
+				<%= render "form" %>
+	     	</div> 
+
+			<!-- /////// DISPLAY ALL YOUR POSTS /////////////-->
+			<div  class="six columns ">
 				<% if @posts != nil %>
-					<% @user.posts.each do |p| %>
-						<div id="happy_post" class="twelve columns">
-							<% if p.user_id == current_user.id %>
-								<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
-											:data => {confirm: "Do you wish to delete your happy moment?"} %>
-								</div>
-							
-								<%= p.created_at.strftime("%D") %>
-								<p><%= p.body %></p>
-								Username: <%= p.user.username %>
-								
-								Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %>
-							<% end %>
-						 </div> 
+					<% if @posts != nil %>
+						<% @user.posts.reverse.each do |p| %>
+							<div id="happy_post" class="twelve columns">
+								<% if p.user_id == current_user.id %>
+									<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
+												:data => {confirm: "Do you wish to delete your happy moment?"} %>
+									</div>
+									<div id="time">
+										<%= p.created_at.strftime("%D") %>
+									</div>
+									
+									<div id="name">
+									-	<%= p.user.username %>
+									</div>
+									<p><%= p.body %></p>
+									
+									
+									<!-- Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %> -->
+								<% end %>
+							 </div> 
+						<% end %>
 					<% end %>
 				<% end %>
-			<% end %>
-		</div> 
+			</div> 
+		</div>
+
 
 
 	</div>
