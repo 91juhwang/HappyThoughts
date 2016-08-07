@@ -25,8 +25,9 @@ class PostsController < ApplicationController
 
 		@thoughts_flatten = thoughts.flatten 
 		@thoughts_hash = counted_words(@thoughts_flatten) #function to count flattened words
-		@thoughts_json = @thoughts_hash.to_json #tansfering data to json
-
+		# Changing above hash to this format: [{word => "df", count => 1}, {word => "s", count => 4}]
+		@thoughts_arry = change_counted_word_format(@thoughts_hash) 
+		@thoughts_json = @thoughts_arry.to_json #tansfering data to json
 	end
 
 	def create
@@ -71,4 +72,11 @@ class PostsController < ApplicationController
 			return count_words
 		end
 
+		def change_counted_word_format(hash)
+			arry = []
+			hash.each do |k, v|
+				arry << {"word" => k, "count" => v}
+			end
+			return arry
+		end
 end

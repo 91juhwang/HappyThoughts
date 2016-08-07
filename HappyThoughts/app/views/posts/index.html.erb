@@ -32,22 +32,20 @@
 		<!-- /////// DISPLAY ALL YOUR POSTS /////////////-->
 		<div  class="six columns ">
 			<% if @posts != nil %>
-				<% if @posts != nil %>
-					<% @user.posts.each do |p| %>
-						<div id="happy_post" class="twelve columns">
-							<% if p.user_id == current_user.id %>
-								<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
-											:data => {confirm: "Do you wish to delete your happy moment?"} %>
-								</div>
+				<% @user.posts.each do |p| %>
+					<div id="happy_post" class="twelve columns">
+						<% if p.user_id == current_user.id %>
+							<div id="close"> <%= link_to " X ", post_path(p.id), :method => :delete, 
+										:data => {confirm: "Do you wish to delete your happy moment?"} %>
+							</div>
+						
+							<%= p.created_at.strftime("%D") %>
+							<p><%= p.body %></p>
+							Username: <%= p.user.username %>
 							
-								<%= p.created_at.strftime("%D") %>
-								<p><%= p.body %></p>
-								Username: <%= p.user.username %>
-								
-								Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %>
-							<% end %>
-						 </div> 
-					<% end %>
+							Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %>
+						<% end %>
+					 </div> 
 				<% end %>
 			<% end %>
 		</div> 
