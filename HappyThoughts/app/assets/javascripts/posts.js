@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 								 .attr("cy", function(d,i){ return i * 25 })
 								 .attr("r", function(d){ 
 								 	if (d.count * 30 > 120) {
-								 		return 90
+								 		return 9
 								 	}	else {
 								 		return d.count * 15 
 								 	}})
