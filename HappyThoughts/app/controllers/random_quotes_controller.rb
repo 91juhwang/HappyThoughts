@@ -17,7 +17,7 @@ class RandomQuotesController < ApplicationController
 		end
 	end
 
-
+	# calling in JSON data as url 
 	def d3_data
 		@posts = Post.all
 		@user = User.find(current_user.id)
@@ -30,7 +30,8 @@ class RandomQuotesController < ApplicationController
 
 		@thoughts_flatten = thoughts.flatten 
 		@thoughts_hash = counted_words(@thoughts_flatten) #function to count flattened words
-		@thoughts_json = @thoughts_hash.to_json #tansfering data to json
+		@thoughts_arry = change_counted_word_format(@thoughts_hash)  #changing hash format
+		@thoughts_json = @thoughts_arry.to_json #tansfering data to json
 		render(json: @thoughts_json)
 	end
 
@@ -46,5 +47,13 @@ class RandomQuotesController < ApplicationController
 				end
 			end
 			return count_words
+		end
+
+		def change_counted_word_format(hash)
+			arry = []
+			hash.each do |k, v|
+				arry << {"word" => k, "count" => v}
+			end
+			return arry
 		end
 end

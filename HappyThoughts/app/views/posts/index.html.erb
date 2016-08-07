@@ -37,7 +37,6 @@
 			<!-- /////// DISPLAY ALL YOUR POSTS /////////////-->
 			<div  class="six columns ">
 				<% if @posts != nil %>
-					<% if @posts != nil %>
 						<% @user.posts.reverse.each do |p| %>
 							<div id="happy_post" class="twelve columns">
 								<% if p.user_id == current_user.id %>
@@ -52,13 +51,10 @@
 									-	<%= p.user.username %>
 									</div>
 									<p><%= p.body %></p>
-									
-									
 									<!-- Picture: <%= image_tag p.image.url(:small) unless p.image_file_name.nil? %> -->
 								<% end %>
 							 </div> 
-						<% end %>
-					<% end %>
+						<% end %>			
 				<% end %>
 			</div> 
 		</div>
@@ -67,6 +63,7 @@
 
 	</div>
 </div>	
+<!-- creating a variable for javascript -->
 <script type="text/javascript"> 
 	var my_data = "<%= j @thoughts_json %>"
 </script>
