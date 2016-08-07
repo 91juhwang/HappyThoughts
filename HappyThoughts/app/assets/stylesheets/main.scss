@@ -38,44 +38,28 @@ nav{
 	#logo{
 		text-align: center;
 		margin-left: 45%;
+		position: absolute;
+		z-index: 2;
+
+		span{
+			font-family: 'Sacramento', cursive;
+			font-size: 30px;
+			margin: 0px;
+			color: $yellow;
+		}
+
+		#black{
+			color: $lightblack;
+		}
+
 	}
 
-	span{
-		font-family: 'Sacramento', cursive;
-		font-size: 30px;
-		margin: 0px;
-		color: $yellow;
-	}
-
-	#black{
-		color: $lightblack;
 }
 
-	ul{
-		float: right;
-		margin: 0px;
-	}
 
-	li{
-		
-		list-style-type: none;
-		float: left;
-		margin-right: 15px;
-		margin-top: 15px;
-	}
 
-	a{
-		font-weight: 600;
-		color: $lightblack;	
-		letter-spacing: 1px;
-		text-decoration: none;
-	}
 
-	a:hover{
-		text-decoration: underline;
-		/*color: #ccc;*/
-	}
-}
+
 
 
 
