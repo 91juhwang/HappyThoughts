@@ -19,15 +19,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 								 .enter()
 								 .append("circle");
 
-	 							 circle.attr("cx", function(d,i){ return i * 51 })
-								 .attr("cy", function(d,i){ return i * 25 })
+	 							 circle.attr("cx", function(d,i){ return i * 51 * Math.random() })
+								 .attr("cy", function(d,i){ return i * 25 * Math.random() })
 								 .attr("r", function(d){ 
-								 	if (d.count * 30 > 120) {
+								 	if (d.count * 45 > 120) {
 								 		return 9
 								 	}	else {
-								 		return d.count * 15 
+								 		return d.count * 25 
 								 	}})
-								 .attr("style", "border: 1px solid red; fill: orange;");
+								 .attr("style", "border: 1px solid red; fill: orange;")
+								 .text( function (d) {return d.word });
 	})
 
 });
