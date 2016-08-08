@@ -77,6 +77,38 @@
 								  
 							</div>
 					</div>
+
+
+						 <div id="explanation" class="twelve columns">
+		      					
+		
+		      				<div id="what" class="six columns">
+				        	  <h3>Everyone's Happy Thoughts</h3>
+					        </div>
+
+							   
+					        <div class="six columns">
+							          <% @posts.reverse.each do |p| %>
+
+							          <div id="happy_post" class="twelve columns">
+								         
+								         <div id="time">
+								            <%= p.created_at.strftime("%D") %> - <%= p.user.username %>
+								    	</div>
+
+								            <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
+								            <br>
+								          <p> <%= p.body %></p>
+								        
+							        </div>
+							  <% end %>
+						</div>
+
+						</div>
+
+
+
+					</div>
 			  
 		     </div>
 

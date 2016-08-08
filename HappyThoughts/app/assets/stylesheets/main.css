@@ -3,6 +3,32 @@
 
 
 
+div #happy_post{
+   box-shadow: 0px 1px 100px #f4f4f4;
+      border-top: 1px solid #f4f4f4;
+      margin-bottom: 20px;
+}
+
+div #time{
+   margin-top: 20px;
+        margin-left: 20px;
+        color: #ccc;
+        letter-spacing: 2px;
+        font-weight: 100;
+        font-size: 9pt;
+        float: left; 
+}
+
+div #happy_post p{
+ padding: 10px 30px;
+        font-size: 11pt;
+        margin-top: 10px;
+        letter-spacing: 1px;
+        text-align: left;
+        clear: left; 
+
+  
+}
 
 
 
