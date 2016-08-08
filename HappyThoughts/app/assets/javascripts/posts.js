@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	//my_data is defined in index.html.erb script tag. (to use ruby variables in js)
-	console.log(my_data)
 	
 	d3.json("/d3_data", function(error, data){
 		console.log(data) //returns an objcet
