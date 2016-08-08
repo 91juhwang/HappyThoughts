@@ -1,5 +1,104 @@
 @import "https://fonts.googleapis.com/css?family=Sacramento";
 @import "https://fonts.googleapis.com/css?family=Italianno";
+
+
+#front_links{
+  /*background: #ccc;*/
+}
+
+
+#f_link_1{
+    margin-left: 20%;
+}
+
+#f_link_2{
+  float: left;
+  margin-left: 20%;
+}
+
+
+
+#explanation{
+  
+  /*background: #f4f4f4;*/
+  border-top: 1px solid #ffdb00;
+  padding: 10% 0px;
+  margin: 2% 0px;
+}
+
+
+
+#p_welcome{
+  font-size: 11pt;
+  font-family: helvetica;
+  text-align: center;
+}
+
+
+#what{
+  float: left;
+  color: #4f4f4f;
+}
+
+#what_p{
+  float: right;
+ color: #4f4f4f;
+}
+
+
+a #logo {
+  width: 170px;
+  /*background: #ccc;*/
+  padding: 0px;
+  margin: 0px;
+}
+
+
+#saved{
+
+  background-color: #ffdb00;
+  color: #fff;
+  padding: 5px 0px;
+  border-radius: 3px;
+  }
+
+#buttons_q{ 
+  margin-top: 20px;
+  float: right;
+}
+
+
+#quote_generator{
+float: right;
+margin-right: 20px;
+border: 1px solid #ccc;
+text-decoration: none;
+border-radius: 3px;
+padding: 2.5px 0px;
+}
+
+
+a{
+  color: #ccc;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right:20px;
+}
+
+
+a:hover{
+  color: #ffdb00;
+}
+
+
+#saving_quote{
+float: right;
+color: #ccc;
+border: 1px solid #ccc;
+border-radius: 3px;
+padding: 2.5px 0px;
+}
+
 #invisible {
   color: #fff; }
 
@@ -20,7 +119,7 @@ nav {
   border: 1px solid #f4f4f4;
   height: 55px; }
   nav #logo {
-    
+    text-align: center;
     margin-left: 5%;
     position: absolute;
     z-index: 2; }
@@ -33,14 +132,12 @@ nav {
       color: #4f4f4f; }
 
 
-
- /* Remove margins and padding from the list, and add a black background color */
-ul.topnav {
+    ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*background-color: #333;*/
+    
 }
 
 /* Float the list items side by side */
@@ -53,16 +150,17 @@ ul.topnav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    transition: 0.6s;
+    transition: 0.3s;
     font-size: 17px;
 }
 
 /* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #f4f4f4;}
+ul.topnav li a:hover {background-color: #ccc;
+                      color: #fff;  }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {display: none;}
-ul.topnav li.iconX{display: none;}
+ul.topnav li.iconX {display: none;}
 
 
 @media screen and (max-width:680px) {
@@ -75,44 +173,39 @@ ul.topnav li.iconX{display: none;}
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
-
   ul.topnav.responsive {position: relative;
-      z-index: 2;
-      background-color:#ffdb00;
-      height: 700px;
-      padding-top: 100px;
-    }
-  ul.topnav.responsive li.icon {
-      color: #fff;
-      position: absolute;
-      right: 0;
-      top: 0;
-      display: none;
+         z-index: 2;
+     background-color:#ffdb00 ;
+     height: 700px;
+     padding-top: 100px;
+
+
   }
+  ul.topnav.responsive li.icon {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+  }
+
 
   ul.topnav.responsive li.iconX {
-      color: #fff;
-      position: absolute;
-      right: 0;
-      top: 0;
-
+    color: #4f4f4f;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-
-
   ul.topnav.responsive li {
-    text-align: center;
-    color: #fff;
     float: none;
     display: inline;
   }
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
-          color: #fff;
   }
 }
-
 
 
 
@@ -177,7 +270,7 @@ ul.topnav li.iconX{display: none;}
     border-radius: 5px;
     margin-top: 50px;
     height: 250px;
-    /*border: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
     padding: 10px 10px; }
     #home #quote #close {
       float: right;
@@ -222,7 +315,7 @@ ul.topnav li.iconX{display: none;}
     /*background: #ccc;*/
     margin-top: 50px;
     padding-top: 100px;
-    border-top: 1px solid #ccc; }
+  /*  border-top: 1px solid #ccc;*/ }
     #home #post_container #tho {
       margin: 0px;
       padding: 0px; }

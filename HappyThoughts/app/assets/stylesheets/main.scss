@@ -54,6 +54,36 @@ nav{
 
 	}
 
+
+	.topnav{
+
+
+		li{
+			.icon{
+				display: none;
+			}
+
+			.iconx{
+				display: none;
+			}
+
+			float: right;
+			a{
+				display: inline-block;
+			    color: #f2f2f2;
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+			    transition: 0.3s;
+			    font-size: 17px;
+			}
+
+			a:hover{
+				background-color: #555;
+			}
+		}
+	}
+
 }
 
 
@@ -187,36 +217,23 @@ nav{
 			text-align: center;
 			font-size: 15pt;
 			color: $lightblack;
-			/*border: $border;	*/
-
-
 		}
+
 
 		h6{
 			font-size: 15pt;
-			/*text-transform: uppercase;*/
 			margin-top: 30px;
 			float: right;
 			margin-right: 100px;
 			letter-spacing: 1px;
 			color: $grey;
-			/*font-family: 'Italianno', cursive;*/
-			/*font-family: Garamond;*/
-			/*border: 1px solid #ccc;*/
 		}	
-
-
-
-
-
 	}
 
 
 
 
 #post_container{
-
-	/*background: #ccc;*/
 	margin-top: 50px;
 	padding-top: 100px;
 	border-top: 1px solid #ccc;
