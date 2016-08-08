@@ -33,14 +33,14 @@
 		    	<h5>Instructions</h5>
 		    	
 		    	<ol>
-		    		<li>Post at least 3 things that is positive or makes you happy</li>
-		    		<li>Come back and remind yourself of those good things</li>
+		    		<li>Post at least 3 things that is positive or makes you happy during that day!</li>
+		    		<li>Come back and remind yourself of those good things anytime!</li>
 		    		<li>Check out what others are writing and get inspired!</li>
 		    	</ol>
   				<h5>Everyone's Happy Thoughts</h5>
   				<% @posts.reverse.each do |p| %>
   				<p>
-  					<%= p.created_at.strftime("%D") %>
+  					<%= p.created_at.strftime("%D") %> - <%= p.user.username %>
   					<br>
   					<%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
   					<br>
