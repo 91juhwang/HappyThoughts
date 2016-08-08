@@ -1,5 +1,31 @@
 @import "https://fonts.googleapis.com/css?family=Sacramento";
 @import "https://fonts.googleapis.com/css?family=Italianno";
+
+
+
+#buttons_q{
+  margin-top: 20px;
+  float: right;
+}
+
+
+#quote_generator{
+float: right;
+margin-right: 20px;
+border: 1px solid #ccc;
+text-decoration: none;
+}
+
+#quote_generator a{
+  text-decoration: none;
+}
+
+#saving_quote{
+float: right;
+color: #ccc;
+border: 1px solid #ccc;
+}
+
 #invisible {
   color: #fff; }
 
@@ -21,7 +47,7 @@ nav {
   height: 55px; }
   nav #logo {
     text-align: center;
-    margin-left: 45%;
+    margin-left: 5%;
     position: absolute;
     z-index: 2; }
     nav #logo span {
@@ -31,6 +57,86 @@ nav {
       color: #ffdb00; }
     nav #logo #black {
       color: #4f4f4f; }
+
+
+    ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: right;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #4f4f4f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #ccc;
+                      color: #fff;  }
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+ul.topnav li.iconX {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;
+         z-index: 2;
+     background-color:#ffdb00 ;
+     height: 700px;
+     padding-top: 100px;
+
+
+  }
+  ul.topnav.responsive li.icon {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+  }
+
+
+  ul.topnav.responsive li.iconX {
+    color: #4f4f4f;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
 
 #personal {
   height: 50px;
@@ -91,7 +197,7 @@ nav {
     border-radius: 5px;
     margin-top: 50px;
     height: 250px;
-    /*border: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
     padding: 10px 10px; }
     #home #quote #close {
       float: right;
@@ -136,7 +242,7 @@ nav {
     /*background: #ccc;*/
     margin-top: 50px;
     padding-top: 100px;
-    border-top: 1px solid #ccc; }
+  /*  border-top: 1px solid #ccc;*/ }
     #home #post_container #tho {
       margin: 0px;
       padding: 0px; }

@@ -12,22 +12,30 @@
     <div id="home" class="row"> 
 		<!-- /////// DISPLAY A QUOTE /////////////-->
    		<div id="quote" class="twelve columns">	
-   			<!-- <div id="saving_quote">
-				<%= link_to "Save this quote", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
-			</div> -->
-
 			<span id="comilla_1"> “ </span>
 			<span id="comilla_2"> ” </span>
 			<h5 id="daily_quote"> <%= @daily_quote %> </h5>
 			<h6 id="quote_author"> - <%= @author %></h6>
-		
-			<div id="quote_generator">
-				<!-- <%= link_to "Show a different quote", new_random_quote_path, remote: true %> -->
-			</div>
 		</div>
 
-			<!-- /////// CONTAINER POSTS  /////////////-->
 
+<div id="buttons_q" class="twelve columns">
+		<!-- <a id="save"> -->
+			<div id="saving_quote">
+				<%= link_to "Save", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
+			</div> 
+		<!-- </a>	 -->
+
+		<a id="random">
+			<div id="quote_generator">
+			<%= link_to "Random", new_random_quote_path, remote: true %>
+			</div>
+		</a>	
+</div>
+
+
+
+		<!-- /////// CONTAINER POSTS  /////////////-->
 		<div  id="post_container" class="twelve columns">
 			<!-- /////// CREATE A POST /////////////-->
 			<div id="tho" class="six columns">
