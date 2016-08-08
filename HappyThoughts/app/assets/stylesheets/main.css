@@ -2,18 +2,28 @@
 @import "https://fonts.googleapis.com/css?family=Italianno";
 
 
+
+
+
+
+
+#info{
+   /*background: #ccc;*/
+   margin-top: 100px;
+}
+
 #front_links{
   /*background: #ccc;*/
 }
 
 
 #f_link_1{
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 #f_link_2{
   float: left;
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 
@@ -420,7 +430,7 @@ ul.topnav li.iconX {display: none;}
 /*video formatting*/
 .videoWrapper {
   /*position: relative;*/
-  padding-bottom: 56.25%; /* 16:9 */
+/*  padding-bottom: 56.25%; /* 16:9 */*/
   padding-top: 25px;
 }
 .videoWrapper video {
