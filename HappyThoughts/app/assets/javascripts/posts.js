@@ -3,17 +3,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// http://stackoverflow.com/questions/17626555/responsive-d3-chart => making responsive pie chart
 	d3.json("/d3_data", function(error, data){
 		console.log(data) //returns an objcet
+		//returns top 11 
 		var top11 = data.sort(function(a,b) { 
-			if (a.count < b.count) {
-				return 1; //returning bigger one
-			} else
-				return -1; // returning smaller one
-			}).slice(0,11);
-		console.log(top11)
+								if (a.count < b.count) {
+									return 1; 
+								} else
+									return -1; 
+								}).slice(0,11);
 		var width = 1000
 		var height = 500
 		var radius = Math.min(width, height) / 2; 
-		var color = d3.scaleOrdinal(d3.schemeCategory20b)
+		var color = d3.scaleOrdinal()
+								.range([
+									"#ffdb00",
+									"#ff9292", 
+									"#fff4b1",   
+									"#ffd68c", 
+									"#f9d9a5", 
+									"#ffd1dd",
+									"#ffabab",
+									"#ff9292",
+									"#fcf6ff", 
+									"#cdcdcd", 
+									"#fcf8e8",
+								])
 
 		var container = d3.select("#visual_container").append("svg")
 										.attr("width", "100%")
