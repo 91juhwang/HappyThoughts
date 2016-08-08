@@ -1,12 +1,6 @@
 <!-- ///////////QUOTES VISUALIZATION //////////////-->
 <!-- <h8><%= @thoughts_json %></h8> -->
-<div id="visual_container">
-	<div id="chart">
-	</div>
-	<div id="legend">
-		
-	</div>
-</div>
+
 <!-- JS script in  -->
 <!-- <%= javascript_tag do %>
   alert("My example alert box.");
@@ -24,26 +18,34 @@
 
 
 <div id="buttons_q" class="twelve columns">
-		<!-- <a id="save"> -->
+	
 			<div id="saving_quote">
 				<%= link_to "Save", quotes_path(:quotes => @daily_quote, :author => @author, :user_id => current_user.id), remote: true, :method => :post %>
 			</div> 
-		<!-- </a>	 -->
 
-		<a id="random">
 			<div id="quote_generator">
-			<%= link_to "Random", new_random_quote_path, remote: true %>
+				<%= link_to "Quote", new_random_quote_path, remote: true %>
 			</div>
-		</a>	
+
 </div>
 
 
 
-		<!-- /////// CONTAINER POSTS  /////////////-->
-		<div  id="post_container" class="twelve columns">
-			<!-- /////// CREATE A POST /////////////-->
-			<div id="tho" class="six columns">
-				<%= render "form" %>
+			<!-- /////// CONTAINER POSTS  /////////////-->
+			<div  id="post_container" class="twelve columns">
+				<!-- /////// CREATE A POST /////////////-->
+				<div id="tho" class="six columns">
+					<%= render "form" %>
+
+
+
+			<div id="visual_container" class="twelve columns">
+				<div id="chart">
+				</div>
+				<div id="legend">
+				</div>
+			</div>
+
 	     	</div> 
 
 			<!-- /////// DISPLAY ALL YOUR POSTS /////////////-->

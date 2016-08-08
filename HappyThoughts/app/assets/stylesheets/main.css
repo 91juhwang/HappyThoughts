@@ -2,8 +2,67 @@
 @import "https://fonts.googleapis.com/css?family=Italianno";
 
 
+#front_links{
+  /*background: #ccc;*/
+}
 
-#buttons_q{
+
+#f_link_1{
+    margin-left: 20%;
+}
+
+#f_link_2{
+  float: left;
+  margin-left: 20%;
+}
+
+
+
+#explanation{
+  
+  /*background: #f4f4f4;*/
+  border-top: 1px solid #ffdb00;
+  padding: 10% 0px;
+  margin: 2% 0px;
+}
+
+
+
+#p_welcome{
+  font-size: 11pt;
+  font-family: helvetica;
+  text-align: center;
+}
+
+
+#what{
+  float: left;
+  color: #4f4f4f;
+}
+
+#what_p{
+  float: right;
+ color: #4f4f4f;
+}
+
+
+a #logo {
+  width: 170px;
+  /*background: #ccc;*/
+  padding: 0px;
+  margin: 0px;
+}
+
+
+#saved{
+
+  background-color: #ffdb00;
+  color: #fff;
+  padding: 5px 0px;
+  border-radius: 3px;
+  }
+
+#buttons_q{ 
   margin-top: 20px;
   float: right;
 }
@@ -14,16 +73,30 @@ float: right;
 margin-right: 20px;
 border: 1px solid #ccc;
 text-decoration: none;
+border-radius: 3px;
+padding: 2.5px 0px;
 }
 
-#quote_generator a{
+
+a{
+  color: #ccc;
   text-decoration: none;
+  padding-left: 20px;
+  padding-right:20px;
 }
+
+
+a:hover{
+  color: #ffdb00;
+}
+
 
 #saving_quote{
 float: right;
 color: #ccc;
 border: 1px solid #ccc;
+border-radius: 3px;
+padding: 2.5px 0px;
 }
 
 #invisible {
