@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    									.attr('preserveAspectRatio','xMinYMin')
 										.append("g")
 										.attr("class", "pie")
-										.attr("transform", "translate(" + Math.min(1100) / 2 + "," + Math.min(500,500) / 2 + ")");
+										.attr("transform", "translate(" + Math.min(1100) / 2 + "," + Math.min(500) / 2 + ")");
 
 		var arc = d3.arc()
 							.innerRadius(0)
