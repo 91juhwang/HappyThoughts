@@ -20,8 +20,36 @@
 		     </div>
 
 
-		    <div di="explanation" class="twelve columns">
+		    <div id="explanation" class="twelve columns">
+		    	
+		    	<h5>What is Happy Thoughts about</h5>
+		    	<p>We can't control what happens in a day, but you can control whether it is a bad or good day.</p>
+		    	<p>The human mind can go from positive to negative easily, but going from negative to positive is a lot harder!</p>
+		    	<p>Happy Thoughts helps you break that negative hold and reminds you that there is a ray of sunlight during a cloudy day!</p>
+		    	<p>Please watch the video below, "Getting stuck in the negatives (and how to get unstuck)" by Alison Ledgerwood. This video explains the value of Happy Thoughts and where it came from</p>
+		    	
+		    	<%= video_tag "vid001.mp4", :size => "320x240", :controls => true %>
+		    	
+		    	<h5>Instructions</h5>
+		    	
+		    	<ol>
+		    		<li>Post at least 3 things that is positive or makes you happy during that day!</li>
+		    		<li>Come back and remind yourself of those good things anytime!</li>
+		    		<li>Check out what others are writing and get inspired!</li>
+		    	</ol>
+  				<h5>Everyone's Happy Thoughts</h5>
+  				<% @posts.reverse.each do |p| %>
+  				<p>
+  					<%= p.created_at.strftime("%D") %> - <%= p.user.username %>
+  					<br>
+  					<%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
+  					<br>
+  					<%= p.body %>
+ 					</p>
+ 					<% end %>
+ 						
 		    </div>
+
 		 </div>
 	</body>
 </html>
