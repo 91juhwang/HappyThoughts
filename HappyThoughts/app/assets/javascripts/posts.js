@@ -1,21 +1,28 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	//my_data is defined in index.html.erb script tag. (to use ruby variables in js)
-	console.log(my_data)
-	
+	// http://stackoverflow.com/questions/17626555/responsive-d3-chart => making responsive pie chart
 	d3.json("/d3_data", function(error, data){
 		console.log(data) //returns an objcet
-
+		var top11 = data.sort(function(a,b) { 
+			if (a.count < b.count) {
+				return 1; //returning bigger one
+			} else
+				return -1; // returning smaller one
+			}).slice(0,11);
+		console.log(top11)
 		var width = 1000
 		var height = 500
 		var radius = Math.min(width, height) / 2; 
 		var color = d3.scaleOrdinal(d3.schemeCategory20b)
 
 		var container = d3.select("#visual_container").append("svg")
-										.attr("width", width)
-										.attr("height", height)
+										.attr("width", "100%")
+										.attr("height", "100%")
+										.attr('viewBox','0 0 '+Math.min(1250)+' '+Math.min(500))
+   									.attr('preserveAspectRatio','xMinYMin')
 										.append("g")
 										.attr("class", "pie")
-										.attr("transform", "translate(" + (width / 2) + "," + (height/2) + ")");
+										.attr("transform", "translate(" + Math.min(1100) / 2 + "," + Math.min(500,500) / 2 + ")");
 
 		var arc = d3.arc()
 							.innerRadius(0)
@@ -26,15 +33,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 							.sort(null);
 
 		var path = container.selectAll("path")
-								.data(pie(data))
+								.data(pie(top11))
 								.enter()
 								.append("path")
 								.attr("d", arc)
 								.attr("fill", function(d,i) { return color(d.data.word); })
 
 		//creating legend
-		var legendRect = 18;
-		var legendSpace = 4;
+		var legendRect = 30;
+		var legendSpace = 6;
 
 		var legend = container.selectAll(".legend")
 								 .data(color.domain())
