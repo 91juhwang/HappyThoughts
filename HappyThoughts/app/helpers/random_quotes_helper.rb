@@ -1,2 +1,0 @@
-module RandomQuotesHelper
-end
