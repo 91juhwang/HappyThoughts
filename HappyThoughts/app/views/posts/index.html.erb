@@ -64,6 +64,7 @@
 									<div id="name">
 									-	<%= p.user.username %>
 									</div>
+									
 									<p><%= p.body %></p>
 									<%= image_tag p.image.url(:large) unless p.image_file_name.nil? %>
 								<% end %>
