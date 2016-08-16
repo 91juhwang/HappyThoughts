@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Sacramento";
 @import "https://fonts.googleapis.com/css?family=Italianno";
-
+@import "https://fonts.googleapis.com/css?family=Raleway:200";
 
 
 div #happy_post{
@@ -28,6 +28,10 @@ div #happy_post p{
         clear: left; 
 }
 
+
+button {
+  width: 120px;
+  height: 40px; }
 
 
 
