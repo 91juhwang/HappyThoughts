@@ -1,6 +1,8 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+  config.secret_key = '51e9199f8ea5c1a4650d2f087e20fecf2d930b24e1fe4139fac77d20d6cb9b1a0ae1c7b612434fcf0f30a03da2dcacd9fd6575a5c9b5601b638b838048be49a6'
   
   config.scoped_views = true
   # The secret key used by Devise. Devise uses this key to generate
