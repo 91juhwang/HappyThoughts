@@ -25,12 +25,12 @@ div #happy_post p{
         margin-top: 10px;
         letter-spacing: 1px;
         text-align: left;
-        clear: left; 
-
-  
+        clear: left;  
 }
 
-
+button {
+  width: 120px;
+  height: 40px; }
 
 
 #info{
