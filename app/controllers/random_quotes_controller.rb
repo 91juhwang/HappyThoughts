@@ -36,24 +36,25 @@ class RandomQuotesController < ApplicationController
 	end
 
 	private
-		def counted_words(arry)
-			count_words = {}
-			arry.each do |word| 
-				if count_words.has_key?(word)
-					value = count_words.fetch(word)
-					count_words[word] = value + 1
-				else
-					count_words[word] = 1
-				end
+	
+	def counted_words(arry)
+		count_words = {}
+		arry.each do |word| 
+			if count_words.has_key?(word)
+				value = count_words.fetch(word)
+				count_words[word] = value + 1
+			else
+				count_words[word] = 1
 			end
-			return count_words
 		end
+		return count_words
+	end
 
-		def change_counted_word_format(hash)
-			arry = []
-			hash.each do |k, v|
-				arry << {"word" => k, "count" => v}
-			end
-			return arry
+	def change_counted_word_format(hash)
+		arry = []
+		hash.each do |k, v|
+			arry << {"word" => k, "count" => v}
 		end
+		return arry
+	end
 end

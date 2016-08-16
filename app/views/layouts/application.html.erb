@@ -65,6 +65,14 @@
 <% end %>	
 
 <%= flash[:error] if flash[:error] %>
+<!-- Flash message when login fails or any type of flash messages for each key & values -->
+<!-- Flash[:alert] & flash[:notice] -->
+
+<!-- <% flash.each do |key, value| %> -->
+    <!-- # <div class="flash <%= key %>"><%= value %></div> -->
+ <!-- <% end %> -->
+
+ <%= flash[:alert] if flash[:alert] %>
 
 
 <%= yield %>
