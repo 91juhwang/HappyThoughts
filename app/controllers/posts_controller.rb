@@ -1,6 +1,7 @@
 require "json"
 class PostsController < ApplicationController
 	before_action :user_redirect
+	skip_before_action :verify_authenticity_token
 
 	def index
 		@posts = Post.all

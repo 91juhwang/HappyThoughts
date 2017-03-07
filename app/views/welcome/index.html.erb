@@ -92,7 +92,7 @@
 							          <div id="happy_post" class="twelve columns">
 								         
 								         <div id="time">
-								            <%= p.created_at.strftime("%D") %> - <%= p.user.username %>
+								            <%= p.created_at.strftime("%D") %> - <%= p.user.email %>
 								    	</div>
 
 								            <%= image_tag p.image.url(:thumb) unless p.image_file_name.nil? %>
